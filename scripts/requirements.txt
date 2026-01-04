@@ -1,1 +1,4 @@
+colorzero==2.0
+gpiozero==2.0.1
 natsort==8.4.0
+setuptools==80.9.0
