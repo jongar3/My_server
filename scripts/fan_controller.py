@@ -6,7 +6,7 @@ import pigpio
 PWM_PIN = 12         #Must be 12, 13, 18 o 19 for PWM hardware 
 TEMP_MIN = 45          
 TEMP_MAX = 70         
-PWM_FREQ = 25000        
+PWM_FREQ = 35        
 CHECK_WAIT = 5         
 
 
@@ -34,6 +34,7 @@ print(f"Control de ventilador activo en GPIO {PWM_PIN}...")
 try:
     while True:
         current_temp = get_cpu_temp()
+        #debug: current_temp=50
         new_speed = calculate_speed(current_temp)
         duty= int(new_speed * 1000000)
         pi.hardware_PWM(PWM_PIN, PWM_FREQ, duty)
