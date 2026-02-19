@@ -2,3 +2,5 @@
 scrpits/.venv
 __pycache__/
 venv/
+jellyfin-cache/
+jellyfin-config/
