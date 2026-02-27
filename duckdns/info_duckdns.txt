@@ -1,0 +1,6 @@
+DuckDNS es un servicio de DNS dinámico gratuito. 
+Permite acceder a mi servidor desde fuera con una IP variable.
+***El token que aparece en este repositorio es solo un ejemplo y no funciona.***
+
+https://www.duckdns.org/
+
