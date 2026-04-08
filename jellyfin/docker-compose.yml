@@ -9,18 +9,19 @@ services:
       - 7359:7359/udp
     volumes:
       # Carpetas de configuración (se crearán donde guardes este archivo)
-      # Formato: [Ruta en máquina] : [Ruta dentro del contenedor]
+      # Formato: [Ruta en Debian] : [Ruta dentro del contenedor]
       - ./jellyfin-config:/config
       - ./jellyfin-cache:/cache
       - /mnt/mi_cuevana:/media:ro
 
-    devices: # Configuracion de dispositivos para aceleracion por hardware en Raspberry Pi
+    devices: # Configuracion de dispositivos para aceleracion por hardware en Raspberry Pi 
       - /dev/dri:/dev/dri # Renderizado de video (V3D)
       - /dev/vchiq:/dev/vchiq # Acceso a los componentes de hardware de Broadcom
       - /dev/video10:/dev/video10 # Decodificador H.264
       - /dev/video11:/dev/video11 # Decodificador HEVC/H.265
       - /dev/video12:/dev/video12 # Codificador
-
+    
     restart: 'unless-stopped'
     environment:
       - JELLYFIN_PublishedServerUrl=http://192.168.1.32  # Ip de la maquina host
+
