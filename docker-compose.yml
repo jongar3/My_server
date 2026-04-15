@@ -10,8 +10,8 @@ services:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
-      # extra_hosts is no longer needed since the API is inside Docker!
-
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   jellyfin:
     image: jellyfin/jellyfin
     container_name: jellyfin
@@ -21,7 +21,6 @@ services:
       - 8096:8096
       - 7359:7359/udp
     volumes:
-      
       # Formato: [Ruta en máquina] : [Ruta dentro del contenedor]
       - ./jellyfin/jellyfin-config:/config
       - ./jellyfin/jellyfin-cache:/cache

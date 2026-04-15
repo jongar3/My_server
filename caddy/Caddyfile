@@ -1,3 +1,6 @@
 jelly.jgc-server.duckdns.org {
     reverse_proxy jellyfin:8096
 }
+qbit.jgc-server.duckdns.org {
+    reverse_proxy host.docker.internal:8080
+}
