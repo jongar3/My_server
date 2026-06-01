@@ -7,4 +7,6 @@ fast_api/__pycache__/
 venv/
 jellyfin-cache/
 jellyfin-config/
-
+.env
+.DS_Store
+*.log
