@@ -5,5 +5,5 @@ qbit.jgc-server.duckdns.org {
     reverse_proxy host.docker.internal:8080
 }
 fotos.jgc-server.duckdns.org {
-    reverse_proxy host.docker.internal:2283
+    reverse_proxy immich_server:2283
 }
